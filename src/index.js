@@ -1,9 +1,19 @@
 
-import { initializePage } from "./loadPage";
+//import { initializeMainSide } from "./loadPage";
+/*import { initializeLeftSide } from "./initializeLeftSide";*/
+import { renderMainPage } from "./renderMainPage";
 import { addProject } from "./addProject";
+import { setDefault } from "./setDefault";
+import { renderTodoProjectName } from "./renderTodoProjectName";
+//localStorage.clear();
+setDefault();
 
-const addBtn = document.getElementById('add')
-addBtn.addEventListener('click', () =>{
-    initializePage();
-    addProject();
+document.addEventListener('DOMContentLoaded', () => {
+    renderTodoProjectName();
+    const addBtn = document.getElementById('add');
+    addBtn.addEventListener('click', () =>{
+        addProject();
+    });
+    renderMainPage();
+    
 });

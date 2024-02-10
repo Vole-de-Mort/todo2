@@ -7,7 +7,6 @@
 .container{
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 1rem;
 }
 .left-side{
   background-color: rgba(63, 64, 66, 0.834);
@@ -23,7 +22,7 @@
 .left-side > *{
   width: 100%;
 }
-.title{
+.title, .titre{
   font-size: 3rem;
 }
 .projectListe{
@@ -40,15 +39,14 @@
   justify-content: space-between;
   align-items: center;
 }
-/*
-.projectListe > *{
-  display: flex;
-  justify-content: space-between;
-}*/
 .addProject{
   text-align: center;
   font-size: 1.6rem;
   padding: 1rem;
+}
+.delete:hover{
+  transform: scale(1.2) rotate(5deg); 
+    transition: transform 0.2s ease; 
 }
 .addProject:hover, .project:hover{
   border-radius: 5px;
@@ -59,6 +57,54 @@
   color: red;
 }
 .main-side{
-  border: 1px solid black;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(77 79 83 / 18%);
+}
+.addContainer{
+  height: 90vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+}
+.champsDeSaisie{
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+.btns{
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.bouton{
+  font-size: 2.1rem;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  width: 40%
+  
+}
+.addBtn{
+  background-color: rgba(19, 64, 19, 0.8);
+}
+.cancelBtn{
+  background-color: rgb(104, 3, 3);
+}
+.taskPanel{
+  width: 70vw;
+  border: 1px solid red;
+  position: absolute;
+  top: 2rem;
+}
+.projectInfoContainer{
+  font-size: 2.3rem;
 }
