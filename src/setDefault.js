@@ -4,7 +4,11 @@ export function setDefault(){
         todos.push({
             title: 'Default Project',
             index : 0,
-            task : ["default Task"],
+            task : [{
+                title : 'Default title',
+                description : 'Default description',
+                importance : 'High'
+            }]
         });
         localStorage.setItem('todos', JSON.stringify(todos));
     }

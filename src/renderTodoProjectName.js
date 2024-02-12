@@ -1,8 +1,7 @@
 import { initializeLeftSide } from "./initializeLeftSide";
-import { initializeMainSide } from "./loadPage"; 
+
 export function renderTodoProjectName(){
     initializeLeftSide();
-    initializeMainSide();
     var index = 0;
     console.log("tood to render");
     const container = document.querySelector(".projectListe");
@@ -15,9 +14,8 @@ export function renderTodoProjectName(){
         const trash = document.createElement("i");
         trashContainer.classList.add("delete");
         trash.classList = "fas fa-trash";
+        trashContainer.setAttribute("data-index", index);
         trashContainer.appendChild(trash);
-        //: ${todo.description}
-
         name.textContent = `${todo.title}`;
         block.setAttribute("data-index",index);
         block.classList.add("project");
